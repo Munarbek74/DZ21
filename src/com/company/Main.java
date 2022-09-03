@@ -27,9 +27,10 @@ public class Main {
 
         try (FileReader fileReader = new FileReader("test.txt")) {
             Scanner scanner = new Scanner(fileReader);
+            int counter = 1;
             while (scanner.hasNextLine()) {
-                System.out.println(scanner.nextLine());
-
+                System.out.println(counter + ": " + scanner.nextLine());
+            counter ++;
             }
                } catch (IOException e) {
             System.out.println(e.getMessage());
